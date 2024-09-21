@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             button2 = new Button();
+            progressBar1 = new ProgressBar();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(314, 81);
-            button1.Name = "button1";
-            button1.Size = new Size(8, 8);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(218, 66);
+            button2.Location = new Point(334, 54);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 1;
             button2.Text = "安装驱动";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(12, 54);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(316, 23);
+            progressBar1.TabIndex = 2;
+            progressBar1.Click += progressBar1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(422, 184);
+            ClientSize = new Size(421, 152);
+            Controls.Add(progressBar1);
             Controls.Add(button2);
-            Controls.Add(button1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "驱动安装";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button button1;
         private Button button2;
+        private ProgressBar progressBar1;
     }
 }
